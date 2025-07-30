@@ -3,7 +3,7 @@ name: Test Build
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - '**'
       # - '!**/assets/**'
@@ -155,7 +155,7 @@ jobs:
 
   prerelease:
     needs: [ prepare, build ]
-    if: github.event_name != 'pull_request' && github.repository == 'gedoor/legado'
+    if: github.event_name != 'pull_request' && github.repository == 'mgz0227/legado'
     runs-on: ubuntu-latest
     env: 
       VERSION: ${{ needs.prepare.outputs.version }}
