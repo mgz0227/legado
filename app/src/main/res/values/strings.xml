@@ -902,6 +902,7 @@
     <string name="direct_link_upload_rule_summary">Used to generate direct link url when exporting book source, book list</string>
     <string name="direct_link_upload_config">Direct link upload configuration</string>
     <string name="copy_play_url">Copy Play Url</string>
+    <string name="skip_book_credits">Skip opening and closing</string>
     <string name="set_source_variable">Set source variable</string>
     <string name="set_book_variable">Set book variable</string>
     <string name="summary">summary</string>
@@ -1228,4 +1229,9 @@
     <string name="disable_horizontal_animation">禁用水平滚动动画</string>
     <string name="enable_manga_gray">开启图片灰色</string>
     <string name="play_mode">播放模式</string>
+    <string name="speed_control">语速控制</string>
+    <string name="next">下一首</string>
+    <string name="previous">上一首</string>
+    <string name="custom_hosts">Custom Hosts</string>
+    <string name="custom_hosts_summary">Domain name to IP mapping</string>
 </resources>

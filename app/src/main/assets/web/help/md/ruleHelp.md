@@ -242,3 +242,24 @@ function decodeImage(data, key) {
 
 decodeImage(result, key)
 ```
+
+* 音频书籍获取歌词
+> 正文内容第一行作为音频播放链接，其余内容作为歌词显示
+
+```js
+result = "https://example.mp3" + "\n" + "[00:00.00][by:花丸的蜜柑面包]"
+```
+
+* 网页JS
+> 本地html中的额外支持的js函数
+
+> `window.close()` 关闭浏览器界面  
+> `screen.orientation.lock()` 全屏后可控制屏幕方向  
+
+> 异步执行阅读函数，并返回字符串结果
+
+```js
+window.run("java.toast('执行成功');'成功'")
+.then(r=>alert(r))
+.catch(e=>alert("执行出错:"+e));
+```

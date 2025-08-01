@@ -25,6 +25,7 @@ import kotlinx.coroutines.flow.flow
 import org.apache.commons.text.StringEscapeUtils
 import splitties.init.appCtx
 import kotlin.coroutines.coroutineContext
+import io.legado.app.help.book.isAudio
 
 /**
  * 获取正文
@@ -151,6 +152,14 @@ object BookContent {
         }
         if (needSave) {
             BookHelp.saveContent(bookSource, book, bookChapter, contentStr)
+        }
+        if (book.isAudio) {
+            val index = contentStr.indexOf("\n")
+            if (index != -1) {
+                contentStr.substring(index).trimIndent()
+                    .takeIf { it.isNotEmpty() }?.let { bookChapter.lyric = it }
+                contentStr = contentStr.substring(0, index)
+            }
         }
         return contentStr
     }
